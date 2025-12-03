@@ -1,0 +1,32 @@
+# === Common (공통) ===
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# === Frontend (Next.js) ===
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/.env
+frontend/.env.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# === Backend (Spring Boot) ===
+backend/.gradle/
+backend/build/
+backend/out/
+backend/bin/
+backend/hs_err_pid*
+
+# === Database (Docker) ===
+# 🚨 DB 데이터 파일은 용량이 크고 민감하므로 절대 올리면 안 됩니다!
+oracle-data/
+
+# === Sensitive Config (보안) ===
+# 실제 배포 시에는 application.properties도 가려야 하지만,
+# 포트폴리오용이라 API 키만 지우고 올리기로 했다면 주석 처리하세요.
+# backend/src/main/resources/application.properties
