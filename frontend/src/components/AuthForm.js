@@ -8,7 +8,8 @@ import { useRouter } from "next/navigation";
 
 export default function AuthForm({ errorMsg: propErrorMsg }) {
   const router = useRouter();
-  // 🚨 [수정] 127.0.0.1 -> localhost 로 통일
+
+  // 소셜 로그인 기본 URL
   const OAUTH_URL = "http://localhost:8080/oauth2/authorization";
 
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -23,13 +24,10 @@ export default function AuthForm({ errorMsg: propErrorMsg }) {
     setErrorMsg(null);
 
     try {
-      // 🚨 [수정] localhost로 요청
-      await axios.post("http://localhost:8080/api/auth/login", formData, {
-        withCredentials: true, // 쿠키 저장 필수
+      await axios.post("/api/auth/login", formData, {
+        withCredentials: true,
       });
 
-      // 🚨 [중요] 로그인 성공 시 강제로 페이지 새로고침하며 이동
-      // (새로고침을 해야 브라우저가 쿠키를 확실하게 인식합니다)
       window.location.href = "/profile";
     } catch (error) {
       console.error("로그인 실패:", error);
@@ -51,6 +49,7 @@ export default function AuthForm({ errorMsg: propErrorMsg }) {
         </div>
       )}
 
+      {/* 이메일/비번 로그인 폼 */}
       <form onSubmit={handleLogin} className="flex flex-col gap-3 w-full">
         <div className="flex flex-col gap-1">
           <label className="text-gray-400 text-xs ml-1">이메일</label>
@@ -96,31 +95,15 @@ export default function AuthForm({ errorMsg: propErrorMsg }) {
         <div className="h-px bg-gray-700 flex-1"></div>
       </div>
 
+      {/* 🌟 소셜 로그인 섹션 (카카오/구글 삭제됨) */}
       <div className="flex flex-col gap-3 w-full">
-        <a
-          href={`${OAUTH_URL}/kakao`}
-          className="transition hover:opacity-90 active:scale-95"
-        >
-          <div className="bg-[#FEE500] text-black py-3 rounded font-bold text-center flex items-center justify-center gap-2 relative">
-            <span className="absolute left-4 text-xl">💬</span>
-            카카오로 시작하기
-          </div>
-        </a>
-        <a
-          href={`${OAUTH_URL}/google`}
-          className="transition hover:opacity-90 active:scale-95"
-        >
-          <div className="bg-white text-black py-3 rounded font-bold text-center flex items-center justify-center gap-2 relative">
-            <span className="absolute left-4 text-xl">G</span>
-            구글로 시작하기
-          </div>
-        </a>
+        {/* 네이버만 남김 */}
         <a
           href={`${OAUTH_URL}/naver`}
           className="transition hover:opacity-90 active:scale-95"
         >
-          <div className="bg-[#03C75A] text-white py-3 rounded font-bold text-center flex items-center justify-center gap-2 relative">
-            <span className="absolute left-4 text-xl font-black">N</span>
+          <div className="bg-[#03C75A] text-white py-3 rounded font-bold text-center relative">
+            <span className="absolute left-4 text-xl font-black">N</span>{" "}
             네이버로 시작하기
           </div>
         </a>

@@ -109,7 +109,8 @@ export default function SearchPage() {
             onClick={() => handlePlay(track)}
             className="relative flex items-center gap-4 p-3 rounded-md cursor-pointer transition group hover:bg-[#2a2a2a]"
           >
-            <div className="relative w-16 h-16 flex-shrink-0 shadow-md">
+            {/* 🚨 [수정됨] flex-shrink-0 -> shrink-0 */}
+            <div className="relative w-16 h-16 shrink-0 shadow-md">
               <Image
                 src={track.album.images[0].url}
                 alt={track.name}

@@ -112,6 +112,7 @@ export default function AlbumDetail({ params }) {
           </div>
         ))}
       </div>
+      <CommentSection albumId={params.id} />
     </div>
   );
 }

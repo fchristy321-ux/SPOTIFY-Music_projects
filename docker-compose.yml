@@ -5,7 +5,7 @@ services:
     image: gvenzl/oracle-xe:slim
     container_name: music-db
     ports:
-      - "1521:1521"
+      - "1522:1521"
     environment:
       - ORACLE_PASSWORD=oracle
     volumes:

@@ -1,17 +1,27 @@
-/* 🌟 v4에서는 이 한 줄이면 끝납니다! (base, components, utilities 모두 포함) */
 @import "tailwindcss";
 
-/* 스포티파이 감성: 검정 배경 + 흰 글씨 */
-body {
-  background-color: #000000;
-  color: #ffffff;
+:root {
+  --background: #000000;
+  --foreground: #ededed;
 }
 
-/* 스크롤바 디자인 (선택사항) */
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 스크롤바 숨기기 (선택사항) */
 ::-webkit-scrollbar {
   width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
 }
 ::-webkit-scrollbar-thumb {
   background: #333;
   border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

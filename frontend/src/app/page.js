@@ -3,21 +3,20 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Image from "next/image";
-import { usePlayer } from "@/context/PlayerContext"; // 👈 Context 사용
+import { usePlayer } from "@/context/PlayerContext";
+import CommentSection from "@/components/CommentSection";
 
 export default function Home() {
   const [albums, setAlbums] = useState([]);
-  const { playTrack } = usePlayer(); // 👈 재생 함수 가져오기
+  const { playTrack } = usePlayer();
 
   useEffect(() => {
     const fetchNewReleases = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:8080/api/spotify/new-releases"
-        );
+        const response = await axios.get("/api/spotify/new-releases");
         setAlbums(response.data.items);
       } catch (error) {
-        console.error(error);
+        console.error("데이터 로딩 실패:", error);
       }
     };
     fetchNewReleases();
@@ -25,10 +24,7 @@ export default function Home() {
 
   const handleAlbumClick = async (album) => {
     try {
-      // 1. 트랙 정보 가져오기
-      const response = await axios.get(
-        `http://localhost:8080/api/spotify/album/${album.id}/tracks`
-      );
+      const response = await axios.get(`/api/spotify/album/${album.id}/tracks`);
       const tracks = response.data.items;
       if (tracks.length === 0) return;
 
@@ -36,14 +32,12 @@ export default function Home() {
       const artistName = firstTrack.artists[0].name;
       const trackName = firstTrack.name;
 
-      // 2. 유튜브 ID 가져오기
       const query = `${artistName} ${trackName} official audio`;
       const youtubeRes = await axios.get(
-        `http://localhost:8080/api/spotify/youtube-video?query=${query}`
+        `/api/spotify/youtube-video?query=${query}`
       );
 
       if (youtubeRes.data) {
-        // 🌟 3. 전역 플레이어 실행! (여기가 바뀐 부분)
         playTrack({
           title: trackName,
           artist: artistName,
@@ -61,11 +55,12 @@ export default function Home() {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-6">🔥 최신 발매 앨범</h1>
+
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
         {albums.map((album) => (
           <div
             key={album.id}
-            onClick={() => handleAlbumClick(album)} // 앨범 객체 통째로 넘김
+            onClick={() => handleAlbumClick(album)}
             className="bg-[#181818] p-4 rounded-lg transition cursor-pointer group hover:bg-[#282828]"
           >
             <div className="relative w-full aspect-square mb-4 shadow-lg">
@@ -81,10 +76,20 @@ export default function Home() {
             </div>
             <h3 className="font-bold truncate text-white mb-1">{album.name}</h3>
             <p className="text-sm text-gray-400 truncate">
-              {album.artists.map((a) => a.name).join(", ")}
+              {album.artists.map((artist) => artist.name).join(", ")}
             </p>
           </div>
         ))}
+      </div>
+
+      <div className="mt-20 border-t border-gray-800 pt-10 mb-20">
+        <h2 className="text-2xl font-bold mb-4 text-green-500">
+          💬 Music Station 방명록
+        </h2>
+        <p className="text-gray-400 mb-6">
+          자유롭게 의견을 남겨주세요. (클린봇이 욕설을 필터링합니다)
+        </p>
+        <CommentSection albumId="guestbook" />
       </div>
     </div>
   );

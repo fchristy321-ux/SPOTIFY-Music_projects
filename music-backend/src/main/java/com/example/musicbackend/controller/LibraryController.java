@@ -64,7 +64,7 @@ public class LibraryController {
 
         //2.DB 관리인에게 1번 유저가 최신순으로 저장한거 다 가져오라고 시킴
         //결과는 LIST형태로 나옴
-        return ResponseEntity.ok(repository.findByUserIdOrderByAddedAtDesc(tempUserId));
+        return ResponseEntity.ok(repository.findByUserIdOrderByAddedAtDesc( tempUserId));
     }
     //해석: 보관함 페이지에 들어갔을때 내가 저장했던 노래 목록을 뿌려주기 위한 기능
     //----------------------------------------------------------------------
