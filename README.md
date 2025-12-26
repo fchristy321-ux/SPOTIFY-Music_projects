@@ -53,7 +53,7 @@ Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자�
 <img width="1919" height="904" alt="image" src="https://github.com/user-attachments/assets/f590e96e-53f8-47ca-883a-25f8ed7ed448" />
 
 
-* **프로필 관리**: 사용자의 닉네임, 프로필 이미지, 소개글 등을 자유롭게 수정할 수 있는 환경을 제공
+* **프로필 관리**: 사용자의 닉네임을 자유롭게 수정할 수 있는 환경을 제공
 
   
 ### 🤖 AI DJ 뮤직봇 (Personalized Recommendation)
