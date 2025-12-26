@@ -36,7 +36,9 @@ Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자�
 <img width="1910" height="905" alt="image" src="https://github.com/user-attachments/assets/30b6183c-93bd-4ebb-bdfe-28dd766ba563" />
 
  **데이터 매시업 재생**: Spotify API에서 가져온 트랙 정보(제목, 아티스트명)를 바탕으로 YouTube Data API를 자동 쿼리하여 가장 적합한 공식 뮤직비디오나 음원 영상을 매칭하여 재생
+ 
  **하단 고정형 컨트롤러**: 페이지를 이동하더라도 음악이 끊기지 않도록 글로벌 상태 관리를 통해 플레이어를 유지. 재생/일시정지, 다음 곡/이전 곡, 셔플, 반복 재생 및 실시간 프로그레스 바 조작이 가능
+ 
  **비디오 모달 인터페이스**: 영상 중심의 감상을 원하는 사용자를 위해 레이어 팝업 형태의 비디오 플레이어를 제공하며, 고화질 스트리밍을 지원
 
 ### 🔍 정밀 검색 및 나만의 음악 보관함
@@ -44,6 +46,7 @@ Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자�
 <img width="1916" height="901" alt="image" src="https://github.com/user-attachments/assets/626bf738-0ec1-4a53-b79d-8b44300a55c0" />
 
 **통합 검색 엔진**: Spotify의 방대한 데이터베이스를 활용하여 단순한 텍스트 검색을 넘어 앨범 아트워크, 발매일, 아티스트 상세 정보가 포함된 고품질 검색 결과를 실시간으로 제공
+
 **영구 저장 보관함 (My Library)**: '좋아요(하트)' 버튼 클릭 시 해당 곡의 모든 메타데이터를 Oracle DB에 저장합니다. 사용자는 본인이 저장한 곡들을 최근 순으로 확인하고 즉시 재생
 
 ### 🔐 보안 인증 및 회원가입 (Auth & Sign Up)
