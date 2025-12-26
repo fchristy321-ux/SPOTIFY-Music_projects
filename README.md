@@ -26,12 +26,13 @@ Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자�
 | External API | Spotify API, YouTube Data API v3, Google Gemini API, Perspective API |
 
 ## 3. 주요 기능 상세 소개 (Key Features)
-## 🏠 메인 대시보드 (Main Dashboard)
+
+## 🏠 메인 화면 (Main Dashboard)
 <img width="1916" height="910" alt="image" src="https://github.com/user-attachments/assets/593b0aef-76d9-4ae6-8ddf-ec5c6d24690a" />
 
 **홈 화면** : 사용자의 취향에 맞는 최신 트렌드 음악과 추천 리스트를 첫 화면에 배치하여 접근성을 극대화
 
-**반응형 사이드바**: 대시보드 내비게이션을 통해 홈, 검색, 라이브러리, AI DJ 등 주요 메뉴로 즉각적인 이동이 가능
+**사이드바**: 대시보드 내비게이션을 통해 홈, 검색, 라이브러리, AI DJ 등 주요 메뉴로 즉각적인 이동이 가능
 
 **배경화면**: 다크 모드와 대비되는 포인트 컬러를 사용하여 세련된 스트리밍 플랫폼 UI를 구현
 
@@ -40,13 +41,13 @@ Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자�
 
 <img width="1910" height="905" alt="image" src="https://github.com/user-attachments/assets/30b6183c-93bd-4ebb-bdfe-28dd766ba563" />
 
- **데이터 매시업 재생**: Spotify API에서 가져온 트랙 정보(제목, 아티스트명)를 바탕으로 YouTube Data API를 자동 쿼리하여 가장 적합한 공식 뮤직비디오나 음원 영상을 매칭하여 재생
+ **영상 매칭 시스템**: Spotify API에서 가져온 트랙 정보(제목, 아티스트명)를 바탕으로 YouTube Data API를 자동 쿼리하여 가장 적합한 공식 뮤직비디오나 음원 영상을 매칭하여 재생
  
- **하단 고정형 컨트롤러**: 페이지를 이동하더라도 음악이 끊기지 않도록 글로벌 상태 관리를 통해 플레이어를 유지. 재생/일시정지, 다음 곡/이전 곡, 셔플, 반복 재생 및 실시간 프로그레스 바 조작이 가능
+ **하단 고정 컨트롤러**: 페이지를 이동하더라도 음악이 끊기지 않도록 글로벌 상태 관리를 통해 플레이어를 유지. 재생/일시정지, 다음 곡/이전 곡, 및 실시간 프로그레스 바 조작이 가능
  
  **비디오 모달 인터페이스**: 영상 중심의 감상을 원하는 사용자를 위해 레이어 팝업 형태의 비디오 플레이어를 제공하며, 고화질 스트리밍을 지원
 
-### 🔍 정밀 검색 및 나만의 음악 보관함
+### 🔍 통합 검색 및 음악 보관함
 <img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/80faff08-2cbc-4b37-a1e0-1bf485807e48" />
 <img width="1916" height="901" alt="image" src="https://github.com/user-attachments/assets/626bf738-0ec1-4a53-b79d-8b44300a55c0" />
 
