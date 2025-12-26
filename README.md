@@ -53,7 +53,9 @@ Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자�
 <img width="1918" height="910" alt="image" src="https://github.com/user-attachments/assets/b8d41268-f072-4fe4-a86b-2779c8cfb88e" />
 
 **단계별 회원가입**: 이메일 중복 확인 및 비밀번호 유효성 검사를 포함한 체계적인 가입 절차를 제공합니다. 보안을 위해 모든 비밀번호는 BCrypt 해시 함수로 암호화되어 저장
+
 **하이브리드 로그인**: Spring Security를 기반으로 직접 구현한 이메일 인증 방식과 네이버 소셜 로그인(OAuth 2.0)을 통합 제공하여 접근 편의성을 높임
+
 **JWT 세션 관리**: 로그인 성공 시 발급되는 JWT 토큰을 통해 사용자 세션을 유지하며, 비로그인 사용자의 접근을 차단하는 보호된 라우팅(Protected Routes)을 적용
 
 ### ⚙️ 사용자 설정 및 관리 (User Settings)
