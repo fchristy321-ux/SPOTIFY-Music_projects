@@ -4,27 +4,6 @@ Spotify와 YouTube를 결합한 AI 기반 음악 스트리밍 & 커뮤니티 플
 
 Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자원을 결합하여 사용자에게 최적화된 시청각 경험을 제공. 다크 모드 기반의 세련된 UI와 Gemini AI를 활용한 개인화된 추천 시스템이 특징
 
-## 📷 서비스 미리보기 (Screenshots)
-
-
-<img width="1916" height="910" alt="image" src="https://github.com/user-attachments/assets/138b747b-ce69-4fa9-93c0-42a2493f8742" />
-
-메인 홈 (최신 앨범 탐색)
-
-<img width="1916" height="901" alt="image" src="https://github.com/user-attachments/assets/f4c14b1e-ac0e-41c3-81f6-9c27ed0d8c87" />
-
-통합 검색 및 하단 플레이어
-
-
-<img width="369" height="521" alt="image" src="https://github.com/user-attachments/assets/89a98b39-17a5-4bdb-afe6-7021707241f9" />
-
-AI DJ 뮤직봇 대화
-
-
-<img width="1913" height="917" alt="image" src="https://github.com/user-attachments/assets/74244054-27d7-4ea5-91e6-b990641c2cc9" />
-
-AI 클린봇 방명록
-
 ## 1. 프로젝트 개요 (Overview)
 
 * **개발 기간**:2025.11~ 2025.12
@@ -55,6 +34,7 @@ AI 클린봇 방명록
 
 ### 🔍 정밀 검색 및 나만의 음악 보관함
 <img width="1919" height="909" alt="image" src="https://github.com/user-attachments/assets/80faff08-2cbc-4b37-a1e0-1bf485807e48" />
+<img width="1916" height="901" alt="image" src="https://github.com/user-attachments/assets/626bf738-0ec1-4a53-b79d-8b44300a55c0" />
 
 * **통합 검색 엔진**: Spotify의 방대한 데이터베이스를 활용하여 단순한 텍스트 검색을 넘어 앨범 아트워크, 발매일, 아티스트 상세 정보가 포함된 고품질 검색 결과를 실시간으로 제공
 * **영구 저장 보관함 (My Library)**: '좋아요(하트)' 버튼 클릭 시 해당 곡의 모든 메타데이터를 Oracle DB에 저장합니다. 사용자는 본인이 저장한 곡들을 최근 순으로 확인하고 즉시 재생
