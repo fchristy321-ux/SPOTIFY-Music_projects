@@ -33,7 +33,7 @@ Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자�
 
 **반응형 사이드바**: 대시보드 내비게이션을 통해 홈, 검색, 라이브러리, AI DJ 등 주요 메뉴로 즉각적인 이동이 가능
 
-**브랜드 아이덴티티**: 다크 모드와 대비되는 포인트 컬러를 사용하여 세련된 스트리밍 플랫폼 UI를 구현
+**배경화면**: 다크 모드와 대비되는 포인트 컬러를 사용하여 세련된 스트리밍 플랫폼 UI를 구현
 
 
 ### 🎹 지능형 스트리밍 및 플레이어 시스템
@@ -52,7 +52,7 @@ Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자�
 
 **통합 검색 엔진**: Spotify의 방대한 데이터베이스를 활용하여 단순한 텍스트 검색을 넘어 앨범 아트워크, 발매일, 아티스트 상세 정보가 포함된 고품질 검색 결과를 실시간으로 제공
 
-**영구 저장 보관함 (My Library)**: '좋아요(하트)' 버튼 클릭 시 해당 곡의 모든 메타데이터를 Oracle DB에 저장합니다. 사용자는 본인이 저장한 곡들을 최근 순으로 확인하고 즉시 재생
+**저장 보관함 (My Library)**: '좋아요(하트)' 버튼 클릭 시 해당 곡의 모든 메타데이터를 Oracle DB에 저장합니다. 사용자는 본인이 저장한 곡들을 최근 순으로 확인하고 즉시 재생
 
 ### 🔐 보안 인증 및 회원가입 (Auth & Sign Up)
 
@@ -60,9 +60,9 @@ Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자�
 <img width="1913" height="750" alt="image" src="https://github.com/user-attachments/assets/46227ebe-1802-478a-8962-c9ef5d7e148b" />
 <img width="1918" height="910" alt="image" src="https://github.com/user-attachments/assets/b8d41268-f072-4fe4-a86b-2779c8cfb88e" />
 
-**단계별 회원가입**: 이메일 중복 확인 및 비밀번호 유효성 검사를 포함한 체계적인 가입 절차를 제공합니다. 보안을 위해 모든 비밀번호는 BCrypt 해시 함수로 암호화되어 저장
+**회원가입**: 이메일 중복 확인 및 비밀번호 유효성 검사를 포함한 체계적인 가입 절차를 제공합니다. 보안을 위해 모든 비밀번호는 BCrypt 해시 함수로 암호화되어 저장
 
-**하이브리드 로그인**: Spring Security를 기반으로 직접 구현한 이메일 인증 방식과 네이버 소셜 로그인(OAuth 2.0)을 통합 제공하여 접근 편의성을 높임
+**로그인**: Spring Security를 기반으로 직접 구현한 이메일 인증 방식과 네이버 소셜 로그인(OAuth 2.0)을 통합 제공하여 접근 편의성을 높임
 
 **JWT 세션 관리**: 로그인 성공 시 발급되는 JWT 토큰을 통해 사용자 세션을 유지하며, 비로그인 사용자의 접근을 차단하는 보호된 라우팅(Protected Routes)을 적용
 
@@ -77,6 +77,7 @@ Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자�
 <img width="375" height="549" alt="image" src="https://github.com/user-attachments/assets/965469a3-7a80-42ae-b828-6c3328626003" />
 
 **Gemini 기반 맞춤 추천**: 사용자가 채팅창에 자연어를 입력하면 Google Gemini AI가 맥락을 분석하여 곡 제목과 추천 사유를 대화형으로 제공
+
 **대화형 인터페이스**: 챗봇 형태의 UI를 통해 사용자와 AI 간의 실시간 소통이 가능하며, 추천받은 곡을 즉시 검색으로 연결
 
 
@@ -115,15 +116,25 @@ Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자�
 
 yml
 version: '3.8'
+
 services:
+
   oracle-db:
+  
     image: gvenzl/oracle-xe:slim
+    
     container_name: music-db
+    
     ports:
+    
       - "1522:1521"
+      
     environment:
+    
       - ORACLE_PASSWORD=oracle
+      
     volumes:
+    
       - ./oracle-data:/opt/oracle/oradata
 
 ## 5. 트러블 슈팅 (Troubleshooting)
