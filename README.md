@@ -52,10 +52,8 @@ Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자�
 
 
 * **프로필 관리**: 사용자의 닉네임, 프로필 이미지, 소개글 등을 자유롭게 수정할 수 있는 환경을 제공
-* **개인화 설정**: 다크 모드/라이트 모드 테마 전환 옵션을 제공하며, 사용자의 마지막 설정 상태를 DB에 저장하여 기기 간 동기화를 지원
-* **계정 관리**: 안전한 서비스 이용을 위해 비밀번호 변경 기능을 제공하며, 사용자 요청 시 모든 데이터를 파기하는 회원 탈퇴 프로세스를 포함
-  
 
+  
 ### 🤖 AI DJ 뮤직봇 (Personalized Recommendation)
 <img width="375" height="549" alt="image" src="https://github.com/user-attachments/assets/965469a3-7a80-42ae-b828-6c3328626003" />
 
