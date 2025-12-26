@@ -29,7 +29,7 @@ Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자�
 ## 🏠 메인 대시보드 (Main Dashboard)
 <img width="1916" height="910" alt="image" src="https://github.com/user-attachments/assets/593b0aef-76d9-4ae6-8ddf-ec5c6d24690a" />
 
-**개인화된 홈 화면** : 사용자의 취향에 맞는 최신 트렌드 음악과 추천 리스트를 첫 화면에 배치하여 접근성을 극대화
+**홈 화면** : 사용자의 취향에 맞는 최신 트렌드 음악과 추천 리스트를 첫 화면에 배치하여 접근성을 극대화
 
 **반응형 사이드바**: 대시보드 내비게이션을 통해 홈, 검색, 라이브러리, AI DJ 등 주요 메뉴로 즉각적인 이동이 가능
 
