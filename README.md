@@ -73,7 +73,7 @@ Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자�
 ### 🤖 AI DJ 뮤직봇 (Personalized Recommendation)
 <img width="375" height="549" alt="image" src="https://github.com/user-attachments/assets/965469a3-7a80-42ae-b828-6c3328626003" />
 
-**Gemini 기반 맞춤 추천**: 사용자가 채팅창에 자연어를 입력하면 Google Gemini AI가 맥락을 분석하여 곡 제목과 추천 사유를 대화형으로 제공
+**Gemini 기반 맞춤 추천**: 사용자가 채팅창에 입력하면 Google Gemini AI가 분석하여 곡 제목과 추천을 제공 
 
 **대화형 인터페이스**: 챗봇 형태의 UI를 통해 사용자와 AI 간의 실시간 소통이 가능하며, 추천받은 곡을 즉시 검색으로 연결
 
@@ -88,7 +88,7 @@ Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자�
 
 # 👤 개인화된 마이페이지 및 계정 관리 (My Page)
 
-## 집중형 프로필 대시보드
+## 프로필 
 로그인한 사용자의 닉네임, 이메일 주소, 그리고 연결된 계정 유형(예: Naver 계정)을 한눈에 확인할 수 있는 카드형 UI를 제공합니다.
 
 ## 통합 바로가기 서비스
@@ -97,7 +97,7 @@ Music Station은 Spotify의 방대한 음악 데이터와 YouTube의 영상 자�
   
   **프로필 수정**: 닉네임 변경 등 사용자 정보를 유연하게 관리할 수 있는 설정 페이지를 연동
 
-## 멀티 계정 및 세션 관리
+## 계정 추가 및 세션 관리
 
   **계정 추가**: 다중 계정 사용자를 고려한 계정 추가 확장성을 확보
   
